@@ -2811,6 +2811,14 @@ clone-response@1.0.2:
   dependencies:
     mimic-response "^1.0.0"
 
+cloudinary@^1.15.0:
+  version "1.15.0"
+  resolved "https://registry.yarnpkg.com/cloudinary/-/cloudinary-1.15.0.tgz#3e4b350604875f868cd8c6d710edfabd1a51efe0"
+  integrity sha512-31E7i7BOVOPfr1uLJhmuK2ZnBvlNv5+/RXmcfUn06kao03aSWDwQ4AuybQiem90jTwMXf2QX3L1f0RVkCbdQ7w==
+  dependencies:
+    lodash "^4.17.11"
+    q "^1.5.1"
+
 coa@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/coa/-/coa-2.0.2.tgz#43f6c21151b4ef2bf57187db0d73de229e3e7ec3"
@@ -5259,6 +5267,15 @@ gatsby-telemetry@^1.1.28:
     stack-trace "^0.0.10"
     stack-utils "1.0.2"
     uuid "3.3.3"
+
+gatsby-transformer-cloudinary@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-cloudinary/-/gatsby-transformer-cloudinary-0.1.2.tgz#601c2da932d736c8fb2e16bcf7d30eba862494f9"
+  integrity sha512-EfXH/Po5pwmJTAS0DQb7xl7b61C+IwZFydZfc/Pz2J3OLemOGxc3/JgpEXinSnqnSIXS+6IVP/np6gSPqXgenA==
+  dependencies:
+    axios "^0.19.0"
+    cloudinary "^1.15.0"
+    fs-extra "^8.1.0"
 
 gatsby-transformer-sharp@^2.2.19:
   version "2.2.19"
@@ -9394,7 +9411,7 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
 
-q@^1.1.2:
+q@^1.1.2, q@^1.5.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=

@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -12,6 +16,16 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      resolve: 'gatsby-transformer-cloudinary',
+      options: {
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
+        apiSecret: process.env.CLOUDINARY_API_SECRET,
+  
+        // This folder will be created if it doesn’t exist.
+        uploadFolder: 'gatsby-cloudinary',
+      },
+  
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
