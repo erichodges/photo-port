@@ -2,6 +2,8 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+console.log(process.env.GATSBY_CLOUDINARY_API_KEY);
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -16,19 +18,16 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
       resolve: 'gatsby-transformer-cloudinary',
       options: {
-        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.CLOUDINARY_API_KEY,
+        cloudName: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-  
-        // This folder will be created if it doesn’t exist.
-        uploadFolder: 'gatsby-cloudinary',
-      },
-  
+        uploadFolder: 'gatsby-cloudinary'
+      },  
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -41,6 +40,8 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
