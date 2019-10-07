@@ -2,7 +2,7 @@ require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-console.log(process.env.GATSBY_CLOUDINARY_API_KEY);
+console.log(process.env.CLOUDINARY_CLOUD_NAME);
 
 module.exports = {
   siteMetadata: {
@@ -22,8 +22,8 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-cloudinary',
       options: {
-        cloudName: process.env.GATSBY_CLOUDINARY_CLOUD_NAME,
-        apiKey: process.env.GATSBY_CLOUDINARY_API_KEY,
+        cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+        apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
         uploadFolder: 'gatsby-cloudinary'
       },  
