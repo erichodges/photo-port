@@ -1,6 +1,8 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-});
+// require('dotenv').config({
+//   path: `.env.${process.env.NODE_ENV}`,
+// });
+
+require('dotenv').config();
 
 console.log(process.env.CLOUDINARY_CLOUD_NAME);
 
