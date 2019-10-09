@@ -5,10 +5,10 @@ import React from 'react';
 export default () => {
   const data = useStaticQuery(graphql`
     query {
-      file(name: { eq: "car.png" }) {
-        allCloudinaryAsset {
-          edges {
-            node {
+      file(relativePath: { eq: "car.png" }) {
+        allFile {
+          nodes {
+            childCloudinaryAsset {
               fluid {
                 srcSet
               }
@@ -19,5 +19,5 @@ export default () => {
     }
   `);
  
-  return <Image fluid={data.file.childCloudinaryAsset.fluid} alt="car image" />;
+  return <Image fluid={data.allFile.nodes.childCloudinaryAsset.fluid} alt="car image" />;
 };
