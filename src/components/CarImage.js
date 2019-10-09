@@ -6,7 +6,7 @@ import React from 'react';
 const CarImage = () => {
   const data = useStaticQuery(graphql`
     query {
-      image: file(name: {eq: "car.png" }) {
+      image: file(name: {eq: "car" }) {
         cloudinary: childCloudinaryAsset {
           fluid {
             ...CloudinaryAssetFluid
