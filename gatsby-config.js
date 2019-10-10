@@ -5,13 +5,13 @@
 // The normal dotenv config works in development, see if the above works in production
 require('dotenv').config();
 
-console.log(process.env.CLOUDINARY_CLOUD_NAME);
+// console.log(process.env.CLOUDINARY_CLOUD_NAME);  // Test Cloudinary connection
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Gatsby Cloudinary Test`,
+    description: `Testing images from Cloudinary in Gatsby.`,
+    author: `Eric Hodges`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `gatsby-cloudinary-test`,
+        short_name: `cloudinary-test`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
