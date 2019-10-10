@@ -7,7 +7,7 @@ const CarImage = () => {
 		query {
 			image: file(name: { eq: "car" }) {
 				cloudinary: childCloudinaryAsset {
-					fluid {
+					fluid(maxWidth: 1920) {
 						...CloudinaryAssetFluid
 					}
 				}
