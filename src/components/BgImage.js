@@ -13,7 +13,7 @@ const FakeBgImage = styled(Image)`
   top: 0;
   left: 0;
   width: 100%;
-  height: ${({ height }) => height };
+  height: 100vh;
   z-index: -1;
 
   & > img {

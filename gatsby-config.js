@@ -10,7 +10,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: `Gatsby Cloudinary Test`,
-    description: `Testing images from Cloudinary in Gatsby.`,
+    description: `Testing images from Cloudinary in Gatsby`,
     author: `Eric Hodges`,
   },
   plugins: [
