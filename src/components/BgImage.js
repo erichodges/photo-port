@@ -18,12 +18,14 @@ const FakeBgImage = styled(Image)`
 
   & > img {
     object-fit: cover !important;
-    object-position: 0% 0% !important;
-    font-family: "object-fit: cover !important; object-position: 0% 0% !important;";
+    
+ 
   }
   
   @media screen and (max-width: 600px) {
     height: ${({ mobileHeight }) => mobileHeight};
+    width: 100vw;
+    object-position: 40% 80% !important;
   }
 `;
 
