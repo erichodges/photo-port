@@ -25,7 +25,6 @@ const FakeBgImage = styled(Image)`
   @media screen and (max-width: 600px) {
     height: ${({ mobileHeight }) => mobileHeight};
     width: 100vw;
-    object-position: 40% 80% !important;
   }
 `;
 
@@ -36,6 +35,11 @@ const Content = styled.div`
   height: 100%;
   width: 100%; 
   z-index: -5;
+
+  @media screen and (max-width: 500px) {
+    top: 47vh;
+    font-size: 2rem !important;
+  }
   `;
 
 const BgImage = ({
