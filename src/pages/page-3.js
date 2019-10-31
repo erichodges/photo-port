@@ -16,7 +16,7 @@ const ThirdPage = ({ data }) => (
     </BgImage>
     <div>
       <SEO title="Page two" />
-      <h1>second page</h1>
+      <h1>third page</h1>
       <p>Welcome to page 3</p>
       <Link to="/">Homepage</Link>
     </div>
