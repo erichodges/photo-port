@@ -1,11 +1,11 @@
-// require('dotenv').config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// });
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
 // The normal dotenv config works in development, see if the above works in production
-require('dotenv').config();
+// require('dotenv').config();
 
-// console.log(process.env.CLOUDINARY_CLOUD_NAME);  // Test Cloudinary connection
+console.log(process.env.CLOUDINARY_CLOUD_NAME);  // Test dotenv
 
 module.exports = {
   siteMetadata: {
