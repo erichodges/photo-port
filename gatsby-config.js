@@ -1,11 +1,10 @@
-require('dotenv').config({
+require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-});
+})
+// the above works with .env.development and
+// require('dotenv').config(); works with .env
 
-// The normal dotenv config works in development, see if the above works in production
-// require('dotenv').config();
-
-console.log(process.env.CLOUDINARY_CLOUD_NAME);  // Test dotenv
+// console.log(process.env.CLOUDINARY_CLOUD_NAME);  // Test dotenv
 
 module.exports = {
   siteMetadata: {
@@ -24,13 +23,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-cloudinary',
+      resolve: "gatsby-transformer-cloudinary",
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,
         apiKey: process.env.CLOUDINARY_API_KEY,
         apiSecret: process.env.CLOUDINARY_API_SECRET,
-        uploadFolder: 'gatsby-cloudinary'
-      },  
+        uploadFolder: "gatsby-cloudinary",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
