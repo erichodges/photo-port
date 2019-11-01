@@ -1,38 +1,37 @@
-import { graphql, Link } from "gatsby";
-import React from "react";
-import BgImage from "../components/BgImage";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import { graphql, Link, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
+import React from "react"
+// import CarImage from "../components/CarImage";
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
+const CarImage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      image: file(name: { eq: "car" }) {
+        cloudinary: childCloudinaryAsset {
+          fluid(maxWidth: 1920) {
+            ...CloudinaryAssetFluid
+          }
+        }
+      }
+    }
+  `)
 
-const SecondPage = ({ data }) => (
+  return <Image fluid={data.image.cloudinary.fluid} alt="car image" />
+}
+
+const PageTwo = () => (
   <Layout>
-    <BgImage 
-      title="car"
-      fluid={data.image.cloudinary.fluid}
-      overlayColor=""
-    >
-      <h1 style={{color: "white" }}>Headline goes here</h1>
-    </BgImage>
+    <SEO title="Home" />
     <div>
-      <SEO title="Page two" />
-      <h1>second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Homepage</Link>
+      <CarImage />
     </div>
+    <h1>Page 2</h1>
+
+    <Link to="/">Home page</Link>
+    <br />
   </Layout>
 )
 
-
-export const query = graphql`
-		query {
-			image: file(name: { eq: "car" }) {
-				cloudinary: childCloudinaryAsset {
-					fluid(maxWidth: 1920) {
-						...CloudinaryAssetFluid
-					}
-				}
-			}
-		}
-`;
-export default SecondPage
+export default PageTwo
