@@ -14,6 +14,8 @@ const Index = ({ data }) => (
       <h1>Home page</h1>
       <p>Welcome</p>
       <Link to="/page-2">Page 2</Link>
+      <br />
+      <Link to="/page-3">Page 3</Link>
     </div>
   </Layout>
 )
