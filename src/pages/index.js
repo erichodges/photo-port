@@ -1,12 +1,15 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
+import logo from "../../static/evija-logo-1560-white.gif"
 import BgImage from "../components/BgImage"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+console.log(logo)
 
 const Index = ({ data }) => (
   <Layout>
     <BgImage title="car" fluid={data.image.cloudinary.fluid} overlayColor="">
+      <img src={logo} alt="" />
       <h1 style={{ color: "white" }}>Headline goes here</h1>
     </BgImage>
     <div>
@@ -22,7 +25,7 @@ const Index = ({ data }) => (
 
 export const query = graphql`
   query {
-    image: file(name: { eq: "evija-hero" }) {
+    image: file(name: { eq: "evija-side" }) {
       cloudinary: childCloudinaryAsset {
         fluid(maxWidth: 1920) {
           ...CloudinaryAssetFluid
