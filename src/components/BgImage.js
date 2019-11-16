@@ -15,7 +15,6 @@ const FakeBgImage = styled(Image)`
   width: 100vw;
   height: 100vh;
   z-index: -10;
-  overflow: hidden !important;
 
   & > img {
     object-fit: cover !important;
@@ -30,7 +29,7 @@ const FakeBgImage = styled(Image)`
 const Content = styled.div`
   position: absolute;
   text-align: center;
-  top: 48vh;
+  top: 18vh;
   height: 100%;
   width: 100%;
   z-index: -5;
