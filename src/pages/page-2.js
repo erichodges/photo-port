@@ -22,8 +22,8 @@ import SEO from "../components/seo"
 
 const PageTwo = () => (
   <Layout>
-    <SEO title="Home" />
-    <div></div>
+    <SEO title="Page 2" />
+
     <h1>Page 2</h1>
 
     <Link to="/">Home page</Link>
