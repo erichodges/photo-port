@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          <p>Footer items here</p>
+          <p>©2019 Footer items here</p>
         </footer>
       </div>
     </>
